@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d476a91500765ba4b9226cf88a9cc739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovementSpeed: 1
+  enemyMovementSpeed: 3
   transform: {fileID: 5437533558785481608}
   rotationSpeed: 100
 --- !u!61 &6936361063452447926

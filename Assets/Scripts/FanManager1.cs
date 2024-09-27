@@ -10,6 +10,7 @@ public class FanManager1 : MonoBehaviour
     public float blowForce = 0.001f;
     public float blowDistance = 2f;
     public bool baloonIsBlowed;
+    public AudioSource flapSound;
     void Start()
     {
         
@@ -17,16 +18,19 @@ public class FanManager1 : MonoBehaviour
 
     void Update()
     {
-       if(Baloon != null)
-        {
-            baloonRotation();
-            applyBlowEffect();
-        }
+       
+            if (Baloon != null)
+            {
+                baloonRotation();
+                applyBlowEffect();
+            }
 
-        if (Input.GetMouseButton(0))
-        {
-            baloonMovement();
-        }
+            if (Input.GetMouseButton(0))
+            {
+
+                 baloonMovement();
+            }
+      
     }
 
     private void FixedUpdate()
@@ -54,6 +58,8 @@ public class FanManager1 : MonoBehaviour
         MouseWorldPosition.z = 0;
 
         transform.position = MouseWorldPosition;
+        flapSound.Play();
+
     }
 
     private void applyBlowEffect()
@@ -75,14 +81,6 @@ public class FanManager1 : MonoBehaviour
         else
         {
             baloonIsBlowed = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Baloon"))
-        {
-            Debug.Log("Fan collided with baloon");
         }
     }
 

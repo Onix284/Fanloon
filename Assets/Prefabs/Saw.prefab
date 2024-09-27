@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7602034643116865826}
   - component: {fileID: 4214737217680578957}
   - component: {fileID: 1087823835227173288}
-  - component: {fileID: -5582240233923153452}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Enemy
@@ -99,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d476a91500765ba4b9226cf88a9cc739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovementSpeed: 1
+  enemyMovementSpeed: 3
   transform: {fileID: 4089858649875970196}
   rotationSpeed: 100
 --- !u!58 &1087823835227173288
@@ -137,16 +136,3 @@ CircleCollider2D:
   m_Offset: {x: 0.00000042887882, y: 0}
   serializedVersion: 2
   m_Radius: 2.2824695
---- !u!114 &-5582240233923153452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040363842404479094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65a12ef19ddbb74190d4f97af6c1d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIsDead: 0

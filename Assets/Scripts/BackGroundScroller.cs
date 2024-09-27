@@ -21,12 +21,10 @@ public class BackGroundScroller : MonoBehaviour
         if (fanManager.baloonIsBlowed)
         {
             offset += new Vector2(-speed * Time.deltaTime, 0);
-            Debug.Log("Baloon is flying");
         }
         else
         {
             offset = offset + new Vector2(speed * Time.deltaTime, 0);;
-            Debug.Log("Baloon is not falling");
         }
 
         meshRenderer.material.mainTextureOffset = offset;

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8922925304223844591}
   - component: {fileID: -4401144643796729412}
   - component: {fileID: 2995712663573790735}
-  - component: {fileID: -3237586640212499743}
   m_Layer: 0
   m_Name: 2D Mace View
   m_TagString: Enemy
@@ -99,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d476a91500765ba4b9226cf88a9cc739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovementSpeed: 1
+  enemyMovementSpeed: 3
   transform: {fileID: 265266840290860112}
   rotationSpeed: 100
 --- !u!61 &2995712663573790735
@@ -147,16 +146,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.189056, y: 19.395866}
   m_EdgeRadius: 0
---- !u!114 &-3237586640212499743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8071637324626156013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65a12ef19ddbb74190d4f97af6c1d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIsDead: 0

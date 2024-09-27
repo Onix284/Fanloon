@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2920038191503646378}
   - component: {fileID: 4391078419556354652}
   - component: {fileID: 6516349504719044592}
-  - component: {fileID: 8669108750316401913}
   m_Layer: 0
   m_Name: Baloon
   m_TagString: Baloon
@@ -159,15 +158,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8402448, y: 4.6562204}
   m_EdgeRadius: 0
---- !u!114 &8669108750316401913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941901317205971962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d81b40f52188e274fb8d70f33a0dab35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
