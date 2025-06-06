@@ -12,7 +12,7 @@ public class CollisionHandler : MonoBehaviour
     public GameObject fan;
     public AudioSource deathSound;
     public ParticleSystem deathParticle;
-    public SpriteRenderer deathSprite;
+
     private void Awake()
     {
         if (Instance == null)
@@ -39,30 +39,38 @@ public class CollisionHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy"))
         {
-            deathSound.Play();
-            deathParticle.Play();
-            deathSprite.enabled = false;
-            StartCoroutine(destroyWait());
+            StartCoroutine(DeathSequence());
+
         }
+
     }
 
-    private void HandlePlayerDeath()
+    private IEnumerator DeathSequence()
     {
-        
-        ShowDeathPanel();
+
         deathScoreText.text = BaloonManager.Instance.GetScore().ToString();
         highScoreText.text = BaloonManager.Instance.GetHighScore().ToString();
-        //Destroy(gameObject); // Destroy the player object
-        Destroy(gameObject);
+
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0f;
+
         Destroy(fan);
+
+
+        // Play effects
+        deathSound.Play();
+        deathParticle.Play();
+
+        // Wait while effects play
+        yield return new WaitForSeconds(deathParticle.main.duration);
+
+        // Show death panel and destroy
+        ShowDeathPanel();
+        Destroy(gameObject);
+       
     }
 
-    private IEnumerator destroyWait()
-    {
-        yield return new WaitForSeconds(2f);
-        HandlePlayerDeath();
-
-    }
 
     private void ShowDeathPanel()
     {
